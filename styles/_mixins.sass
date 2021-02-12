@@ -1,0 +1,33 @@
+
+@mixin fontface($name, $file, $weight: normal, $style: normal)
+  @font-face 
+    font-family: "#{$name}"
+    src: url('/fonts/#{$file}.ttf') format('truetype'),
+    font-weight: $weight
+    font-style: $style
+  
+
+
+
+$breakpoints: ("l-desktop": 1200px,"desktop": ("to": 768px, "from": 1200px),"tablet": ("to": 500px, "from": 767px),"mobile": ("to": 378px, "from": 500px),"s-mobile": 377px)
+
+
+@mixin respond-to($breakpoint, $mobile: 'noImport' )
+
+  @if map-has-key($breakpoints, $breakpoint)
+    @if $mobile == true
+      @debug "true"
+      @media screen and (max-width: map-get($breakpoints, $breakpoint) ) 
+        @content
+    @if $mobile == false 
+      @debug "false"
+      @media screen and (min-width: map-get($breakpoints, $breakpoint)) 
+        @content
+    @if $mobile == 'noImport'
+      @debug "noImport"
+      @media (min-width: map-get($breakpoints, $breakpoint, "to")) and (max-width: map-get($breakpoints, $breakpoint, "from") ) 
+        @content
+  @else 
+    @debug "Không có breakpoints này: #{$breakpoint}"
+
+  
