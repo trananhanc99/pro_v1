@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Header from "@/components/header";
+import Nab from "@/components/Navbar/NavbarHome";
+
 export default function Home() {
   return (
     <div>
-      <Header />
+      <Nab />
     </div>
   );
 }

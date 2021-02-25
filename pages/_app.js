@@ -1,10 +1,12 @@
-import MainLayout from "../styles/mainLayout.module.sass";
+import "styles/main.sass";
+// import "~slick-carousel/slick/slick.css";
+// import "~slick-carousel/slick/slick-theme.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className={MainLayout.rootLayout}>
+    <>
       <Component {...pageProps} />
-    </div>
+    </>
   );
 }
 

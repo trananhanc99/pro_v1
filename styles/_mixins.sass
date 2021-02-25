@@ -30,4 +30,27 @@ $breakpoints: ("l-desktop": 1200px,"desktop": ("to": 768px, "from": 1200px),"tab
   @else 
     @debug "Không có breakpoints này: #{$breakpoint}"
 
-  
+
+
+
+
+
+
+/// mode
+
+$themes: (darkTheme: ("text-color": white, "bg-color": #424242), lightTheme: ("text-color": black, "bg-color": #f5f5f5))
+
+
+
+
+@mixin theme()
+  @each $theme, $map in $themes 
+    $theme-map: $map !global
+    @debug $theme
+    .#{$theme} & 
+      @content
+  $theme-map: null !global
+
+
+@function theme-get($key) 
+  @return map-get($theme-map, $key)
