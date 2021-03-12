@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
+    "framer-motion": "^3.10.2",
     "next": "^10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -20,11 +23,16 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/react": "^6.1.20",
     "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
     "postcss": "^8.2.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.0",
     "postcss-preset-env": "^6.7.0",
-    "precss": "^4.0.0"
+    "precss": "^4.0.0",
+    "url-loader": "^4.1.1"
   }
 }

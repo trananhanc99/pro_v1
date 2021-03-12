@@ -3,6 +3,9 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   presets: [],
+  corePlugins: {
+    outline: false,
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -140,6 +143,8 @@ module.exports = {
       "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       none: "none",
+      link:
+        "inset 0rem 0rem 0rem 0rem #fff, inset 0 -1.6rem .5rem 0 rgb(165 243 252 / 40%)",
     },
     container: {},
     cursor: {
@@ -223,11 +228,10 @@ module.exports = {
     },
     fontWeight: {
       thin: "100",
-      extralight: "200",
+      extralight: "100",
       light: "300",
       normal: "400",
       medium: "500",
-      semibold: "600",
       bold: "700",
       extrabold: "800",
       black: "900",
@@ -531,11 +535,7 @@ module.exports = {
       11: "11",
       12: "12",
     },
-    outline: {
-      none: ["2px solid transparent", "2px"],
-      white: ["2px dotted white", "2px"],
-      black: ["2px dotted black", "2px"],
-    },
+
     padding: (theme) => theme("spacing"),
     placeholderColor: (theme) => theme("colors"),
     placeholderOpacity: (theme) => theme("opacity"),
@@ -851,7 +851,7 @@ module.exports = {
     objectPosition: ["responsive"],
     opacity: ["responsive", "group-hover", "focus-within", "hover", "focus"],
     order: ["responsive"],
-    outline: ["responsive", "focus-within", "focus"],
+    // outline: ["responsive", "focus-within", "focus"],
     overflow: ["responsive"],
     overscrollBehavior: ["responsive"],
     padding: ["responsive"],
