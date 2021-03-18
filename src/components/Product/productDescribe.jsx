@@ -18,9 +18,9 @@ function ProductDescribe(props) {
         </div>
         {/* name product */}
         <div className={cl(StyleProductNormal.nameAndDescribeProductToy, 'flex flex-col relative')}>
-          <span className="break-words font-bold overflow-ellipsis overflow-hidden">áda</span>
-          <span className={cl(StyleProductNormal.describeProduct, "mt-3 font-normal base")}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, eos iure. Assumenda, aspernatur nostrum velit ab consequuntur facilis pariatur enim earum delectus, obcaecati et. Maxime illum harum aliquam veniam minima?</span>
-          <div className={cl(StyleProductNormal.priceDescribeProductToy, 'absolute')}>
+          <span className={cl(StyleProductNormal.nameDProductToy, 'break-words font-bold overflow-ellipsis overflow-hidden')}>áda</span>
+          <span className={cl(StyleProductNormal.describeProduct, "font-normal base")}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, eos iure. Assumenda, aspernatur nostrum velit ab consequuntur facilis pariatur enim earum delectus, obcaecati et. Maxime illum harum aliquam veniam minima?</span>
+          <div className={cl(StyleProductNormal.priceDescribeProductToy)}>
             <PriceProduct />
           </div>
         </div>

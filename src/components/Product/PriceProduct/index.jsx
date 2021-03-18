@@ -4,7 +4,7 @@ import StylePrice from './Price.module.sass';
 import cl from 'classnames'
 import Cart from './cart.svg'
 
-function PriceProduct(props) {
+function PriceProduct() {
   return (
     <div className={cl(StylePrice.priceProductToy, 'flex justify-between items-center')}>
       <div>

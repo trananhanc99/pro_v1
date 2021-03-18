@@ -1,11 +1,17 @@
 @import ../../../styles/_color
 // Product normal
 .productToy
-  max-width: 500px
   background: #ffffff
-
+  overflow: hidden
+  max-height: 21.5rem
+  padding-bottom: 1.5rem
+.productImgToy 
+  width: 100%
+  height: 11.5625rem
+.priceNormalProduct
+  padding: 0px 1rem
 .nameProductToy
-  height: 65px
+  margin: 1.1875rem 0px 1.9375rem 1.1875rem
   span 
     font-size: 1.3rem
     display: -webkit-box
@@ -13,22 +19,37 @@
     -webkit-box-orient: vertical
 
 
-
+  
 // Product have describe
 .productDescribeToy
-  max-width: 700px
-  height: 270px
+  width: 100%
+  max-height: 21.5rem
+  height: 100%
+  overflow: hidden
+  background: #ffffff
 .imagesDescribeToy 
-  max-width: 400px
-
+  max-width: 50%
+  height: 100%
 .nameAndDescribeProductToy
   width: 100%
-  border-left: 2px solid red
+  border-left: 2px solid $background
+.nameDProductToy
+  line-height: 1
+  margin: 1.5625rem 0px 1.8125rem 1rem
+  font-size: 1.8rem
 .priceDescribeProductToy
+  padding: 1.5rem 1rem
   width: 100%
-  bottom: 5%
+  bottom: 2.3rem
 .describeProduct
   color: $textDescribe
+  display: -webkit-box
+  -webkit-line-clamp: 6
+  -webkit-box-orient: vertical
+  overflow: hidden
+  margin-left: 1rem
+  width: 85%
+
 
 
 

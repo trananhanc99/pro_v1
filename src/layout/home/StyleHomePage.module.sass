@@ -1,16 +1,19 @@
+@import ../../../styles/_mixins
+  
 .areaBannerOne 
-  grid-template-columns: 46.125rem 22.125rem
+  grid-template-columns: repeat(3, 1fr)
   grid-gap: 1.875rem
-  margin-top: 3.25rem
-.areaBannerTwo 
-  margin-top: 1.8125rem
-  grid-template-columns: 22.125rem 22.125rem 22.125rem
-  grid-gap: 1.875rem
+  margin: 3.4375rem auto
+  max-width: 70.125rem
+  @include breakpoint(mobile)
+    display: none
 .areaNewProduct 
   margin: 20px
 .sectionNewProductOne 
-  grid-template-columns: 34.0625rem 16.125rem 16.125rem
+  margin: 50px 0px
+  grid-template-columns: repeat(4, 1fr)
   grid-gap: 1.875rem
-.sectionNewProductTwo
-  grid-template-columns: repeat(4, 16.125rem)
-  grid-gap: 1.875rem
+  max-width: 70.125rem
+  margin: 0 auto
+.gridC
+  grid-column: span 2

@@ -13,13 +13,17 @@ function ProductNormal(props) {
     <>
       <div className={cl(StyleProductNormal.productToy, 'relative shadow-lg rounded-md')}>
         {/* img product */}
-        <ImageProduct />
+        <div className={cl(StyleProductNormal.productImgToy)}>
+          <ImageProduct />
+        </div>
         {/* name product */}
         <div className={cl(StyleProductNormal.nameProductToy)}>
-          <span className="break-words font-bold overflow-ellipsis overflow-hidden">áda</span>
+          <span className="break-words font-bold overflow-ellipsis overflow-hidden leading-none">áda</span>
         </div>
         {/* price product */}
-        <PriceProduct />
+        <div className={cl(StyleProductNormal.priceNormalProduct)}>
+          <PriceProduct />
+        </div>
       </div>
     </>
   )
